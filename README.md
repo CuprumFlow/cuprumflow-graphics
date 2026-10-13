@@ -10,9 +10,7 @@ This is aimed at devices that need a proper graphical interface but don’t need
 
 <img src="images/cuprumflow-graphics-main.jpg" width=800>
 
-For the technically adventurous, the FPGA version is where the CuprumFlow approach stands out. Drawing primitives -like filled rectangles, lines, alpha-blended bitmaps- are written in ordinary C-compatible source. Using a custom transpiler, that exact same source can be compiled as software for fast testing on a PC or on the small CPU board, or automatically turned into hardware accelerators on the FPGA board — no separate HDL rewrite required.
-
-This allows you to write your graphics cores once, and run them in software or turn them into hardware. Actual testing has shown that the accelerators run several times faster than the pure software version, leaving the CPU free for application logic.
+For the technically adventurous, the FPGA version is where the CuprumFlow approach stands out. Drawing primitives -like filled rectangles, lines, alpha-blended bitmaps- are written in ordinary C-compatible source (see [example](accelerators/example.cc)). Using a custom transpiler, that exact same source can be compiled as software for fast testing on a PC or on the small CPU board, or automatically turned into hardware accelerators on the FPGA board — no separate HDL rewrite required. Actual testing has shown that the accelerators run several times faster than the pure software version, leaving the CPU free for application logic.
 
 Currently working demos include generative art, simple games, an animated gear logo with anti-aliased edges, scalable fonts, widget-based UI, JPEG decoding, and hardware-accelerated video playback on some higher-end FPGA boards, which are planned. MicroPython examples that talk directly to the framebuffer have also been tested.
 
